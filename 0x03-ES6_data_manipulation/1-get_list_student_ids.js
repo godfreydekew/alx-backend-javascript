@@ -1,6 +1,7 @@
 export default function getListStudentIds(myarray) {
-  if (!Array.isArray(myarray)) {
-    return [];
+  let empty = [];
+  if (Array.isArray(myarray)) {
+    empty = myarray.map((student) => student.id);
   }
-  return myarray.map((student) => student.id);
+  return empty;
 }
