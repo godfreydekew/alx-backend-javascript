@@ -6,7 +6,7 @@ async function countStudents(path) {
     const csvData = await fs.promises.readFile(path, 'utf-8');
 
     // Split the CSV data into an array of lines
-    const lines = csvData.split('\n');
+    const lines = csvData.split('\n').filter((line) => line.trim() !== '');
     const names = [];
     // Skip the header line (assuming the first line is a header)
     for (let i = 1; i < lines.length; i += 1) {
