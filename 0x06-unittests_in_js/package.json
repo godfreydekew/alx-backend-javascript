@@ -2,6 +2,7 @@
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
   "description": "0x06. Unittests in JS",
+  "type": "module",
   "main": "0-calcul.js",
   "scripts": {
     "test": "mocha"
@@ -9,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^5.1.1",
     "mocha": "^10.7.3"
   }
 }
