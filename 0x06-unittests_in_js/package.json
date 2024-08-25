@@ -1,16 +1,35 @@
 {
-  "name": "0x06-unittests_in_js",
+  "name": "unittests_in_js",
   "version": "1.0.0",
-  "description": "0x06. Unittests in JS",
-  "type": "module",
-  "main": "0-calcul.js",
+  "private": true,
+  "license": "MIT",
   "scripts": {
-    "test": "mocha"
+    "lint": "./node_modules/.bin/eslint",
+    "lint-all": "./node_modules/.bin/eslint [0-9]*.js",
+    "lint-fix-all": "./node_modules/.bin/eslint --fix [0-9]*.js",
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1"
+  },
   "devDependencies": {
-    "chai": "^5.1.1",
-    "mocha": "^10.7.3"
+    "@babel/register": "^7.24.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.5.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "mocha": "^6.2.3",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.0",
+    "sinon": "^7.5.0"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x",
+    "yarn": "1.x"
   }
 }
