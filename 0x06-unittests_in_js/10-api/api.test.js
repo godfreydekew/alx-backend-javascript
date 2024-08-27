@@ -47,4 +47,22 @@ describe('API integration test', () => {
         done();
       });
   });
+
+  it('Testing the post request', (done) => {
+    const userName = 'Betty';
+    const options = {
+      url: `${API_URL}/login`,
+      method: 'POST',
+      json: {
+        userName
+      }
+    };
+    request.post(options, (err, res, body) => {
+        if (err) return done(err);
+        expect(res.statusCode).to.equal(200);
+        expect(body).to.be.equal(`Welcome ${userName}`);
+        expect(res.headers['content-type']).to.include('text/html');
+        done();
+      });
+  })
 });
